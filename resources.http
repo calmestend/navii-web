@@ -1,0 +1,23 @@
+### Home page
+GET http://localhost:8080/
+Accept: text/html
+
+### Static file example
+GET http://localhost:8080/static/
+Accept: text/html
+
+### Get delete account form
+GET http://localhost:8080/user/delete
+Accept: text/html
+
+### Submit delete account request
+@email=test_account@test.com
+@password=secret123
+POST http://localhost:8080/user/delete
+Content-Type: application/x-www-form-urlencoded
+
+email={{email}}&password={{password}}&confirmPassword={{password}}
+
+### Privacy policies
+GET http://localhost:8080/privacy_policies
+Accept: text/html
